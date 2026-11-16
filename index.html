@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d12">
+
+  <title>NOCTURNE — The World Beyond the Veil</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="grain"></div>
+
+  <div class="topline">
+    A DOORWAY TO THE UNSEEN · THE VEIL IS THIN TONIGHT
+  </div>
+
+  <header>
+    <a class="brand" href="#home">N<span>O</span>CTURNE</a>
+
+    <nav>
+      <button class="active" data-scroll="home">Home</button>
+      <button data-scroll="portals">Explore</button>
+      <button data-scroll="lore">Mythology</button>
+      <button data-scroll="discover">Discover</button>
+    </nav>
+
+    <button class="nav-cta" id="enterTop">Enter the veil ↗</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="moon"></div>
+      <div class="orbit"></div>
+
+      <div class="hero-content">
+        <div class="eyebrow">
+          ✦ Beyond the ordinary world ✦
+        </div>
+
+        <h1>NOCT<span>U</span>RNE</h1>
+
+        <p>
+          Somewhere between the last light of day and the first breath
+          of night, another world waits. Its doors are hidden.
+          Its stories are older than memory.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn" id="enterBtn">
+            Cross the threshold
+          </button>
+
+          <button class="btn ghost" data-jump="lore">
+            Read the prophecy
+          </button>
+        </div>
+      </div>
+
+      <div class="scroll-note">
+        There is more beneath the surface
+      </div>
+    </section>
+
+    <section class="section" id="portals">
+      <div class="section-head">
+        <div class="kicker">Choose your passage</div>
+        <h2>Four doors. One hidden world.</h2>
+        <p>
+          Every path reveals a different fragment of Nocturne.
+          Follow your curiosity. The world remembers those who wander.
+        </p>
+      </div>
+
+      <div class="portals">
+        <article class="portal" data-modal="archive">
+          <div class="symbol">⌘</div>
+          <small>01 / KNOWLEDGE</small>
+          <h3>The Archive</h3>
+          <p>Forbidden histories, strange beings, relics, and case files sealed for a reason.</p>
+          <span class="enter">Open the records →</span>
+        </article>
+
+        <article class="portal" data-modal="afterhours">
+          <div class="symbol">♫</div>
+          <small>02 / SOUND</small>
+          <h3>Afterhours</h3>
+          <p>Soundtracks for the in-between. A listening room for restless souls and midnight minds.</p>
+          <span class="enter">Enter the listening room →</span>
+        </article>
+
+        <article class="portal" data-modal="realm">
+          <div class="symbol">❧</div>
+          <small>03 / DISCOVERY</small>
+          <h3>The Realm</h3>
+          <p>Wander through the Thornwood, the Drowned Cathedral, and places left off every map.</p>
+          <span class="enter">Explore the realm →</span>
+        </article>
+
+        <article class="portal" data-modal="atelier">
+          <div class="symbol">✧</div>
+          <small>04 / DESIRE</small>
+          <h3>The Atelier</h3>
+          <p>Objects with histories. Fragrance, adornment, and beautiful things touched by myth.</p>
+          <span class="enter">View the collection →</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="lore" id="lore">
+      <div class="lore-inner">
+        <div class="sigil">✦</div>
+
+        <div class="lore-copy">
+          <div class="kicker">The first account · Fragment 001</div>
+
+          <h2>The world behind the world.</h2>
+
+          <p>
+            Before the first kingdom raised its walls, the Veil was woven
+            between what is seen and what is not. It was made to keep two
+            worlds apart, not because one was evil, but because both were unfinished.
+          </p>
+
+          <p>
+            Beyond it lies Nocturne: a realm shaped by memory, moonlight,
+            and the things people leave unsaid. Its forests listen.
+            Its rivers remember. And somewhere, an old archive keeps
+            a record of every soul that has crossed.
+          </p>
+
+          <div class="quote">
+            “The night does not conceal the truth.
+            It gives the truth somewhere to hide.”
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="discover">
+      <div class="section-head">
+        <div class="kicker">A note left for the curious</div>
+        <h2>Not every door is marked.</h2>
+        <p>
+          There are things here that do not appear in the index.
+          Try the seal below. Some secrets only answer when invited.
+        </p>
+      </div>
+
+      <div class="discover">
+        <div>
+          <h3>The Unwritten Entry</h3>
+          <p>Archive designation: [REDACTED] · Clearance: Unrequired</p>
+        </div>
+
+        <button class="btn ghost" id="secretBtn">
+          Reveal a secret ✧
+        </button>
+      </div>
+
+      <div class="secret-result" id="secretResult">
+        “When the black roses bloom beneath a silver sun,
+        seek the key where the forest drinks the stars.”
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">NOCTURNE</div>
+    <div>THE WORLD BEYOND THE VEIL</div>
+    <div>© 2026 · ALL STORIES ARE WAITING</div>
+  </footer>
+
+  <div class="player" id="player">
+    <button class="play" id="playBtn" aria-label="Toggle ambience">▶</button>
+
+    <div>
+      <small>AFTERHOURS · AMBIENCE</small>
+      <strong id="track">Silence Before the Storm</strong>
+    </div>
+
+    <div class="bars">
+      <i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close" id="closeModal">×</button>
+
+      <div class="kicker" id="modalKicker">NOCTURNE / ENTRY</div>
+      <h2 id="modalTitle">The Archive</h2>
+      <p id="modalText"></p>
+      <div id="modalTags"></div>
+
+      <p
+        style="color:var(--gold);font:italic 17px 'Cormorant Garamond',serif;margin-top:24px"
+        id="modalFoot">
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
